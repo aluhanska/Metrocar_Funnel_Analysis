@@ -159,5 +159,4 @@ The analysis uses **9 SQL queries** covering:
 
 ## 👩‍💻 Author
 
-**Anna Denysenko** — Data Analyst  
-📎 [GitHub Profile](https://github.com/aluhanska) · 📊 [Tableau Public](https://public.tableau.com/views/MetrocarFunnelAnalysis_17678222263480/MetrocarFunnelAnalysis) · 📋 [Google Sheets](https://docs.google.com/spreadsheets/d/1jBYosg2WQB116v6XIYiBPpZdz3neYhtzsvnp0aAnADQ/edit?gid=2025238614#gid=2025238614)
+**Anna Denysenko** — Data Analyst
