@@ -1,4 +1,4 @@
--- 1 SQL-запит для побудови воронки користувачів (питання 1.1)
+-- 1. Users funnel segmented by platform and age group
 SELECT
     funnel_step,
 	funnel_name,
@@ -10,7 +10,7 @@ GROUP BY funnel_step, funnel_name, platform, age_range
 ORDER BY funnel_step;
 
 
--- 2 SQL-запит для подальших розрахунків конверсії користувачів (питання 1.2)
+-- 2. Users funnel — overall conversion calculations
 SELECT
     funnel_step,
 	funnel_name,	
@@ -20,7 +20,7 @@ GROUP BY funnel_step, funnel_name
 ORDER BY funnel_step;
 
 
--- 3 SQL-запит для побудови воронки поїздок (питання 2.1)
+-- 3. Rides funnel segmented by platform and age group
 SELECT
     funnel_step,
 	funnel_name,
@@ -33,7 +33,7 @@ GROUP BY funnel_step, funnel_name, platform, age_range
 ORDER BY funnel_step;
 
 
--- 4 SQL-запит для подальших розрахунків конверсії поїздок (питання 2.1)
+-- 4. Rides funnel — overall conversion calculations
 SELECT
     funnel_step,
 	funnel_name,	
@@ -44,7 +44,7 @@ GROUP BY funnel_step, funnel_name
 ORDER BY funnel_step;
 
 
--- 5 SQL-запит для відповіді на питання 2.2
+-- 5. Average waiting time and demand patterns by day and hour
 SELECT
     EXTRACT(DOW FROM request_ts) AS weekday_number, -- 0-6
     TO_CHAR(request_ts, 'Day') AS weekday_name,
@@ -57,7 +57,7 @@ GROUP BY 1, 2, 3
 ORDER BY 1, 3;
 
 
--- 6 SQL-запит для відповіді на питання 3
+-- 6. App downloads by platform
 SELECT
     platform,
     COUNT(app_download_key) AS downloads
@@ -66,7 +66,7 @@ GROUP BY platform
 ORDER BY downloads DESC;
 
 
--- 7 SQL-запит для побудови візуалізації до питання 3
+-- 7. Download data for Tableau visualization
 SELECT
     funnel_step,
 	funnel_name,
@@ -77,7 +77,7 @@ FROM funnel_analysis
 WHERE funnel_step = 1;
 
 
--- 8 SQL-запит для відповіді на питання 4.1
+-- 8. Active users — rides per user by age group
 SELECT
     funnel_step,
     funnel_name,
@@ -92,7 +92,7 @@ GROUP BY funnel_step, funnel_name, platform, age_range
 ORDER BY rides DESC;
 
 
--- 9 SQL-запит для відповіді на питання 4.2
+-- 9. Completed rides segmented by age group
 SELECT
     funnel_step,
     funnel_name,
