@@ -17,8 +17,8 @@ The analysis is segmented by **platform** (iOS / Android / Web) and **age group*
 | Purpose | Tool |
 |---|---|
 | Data processing & calculations | [Google Sheets](https://docs.google.com/spreadsheets/d/1jBYosg2WQB116v6XIYiBPpZdz3neYhtzsvnp0aAnADQ/edit?gid=2025238614#gid=2025238614) |
-| Data extraction & analysis | [SQL] |
-| Data visualization & dashboard | [Tableau]
+| Data extraction & analysis | SQL
+| Data visualization & dashboard | Tableau
 
 ---
 
